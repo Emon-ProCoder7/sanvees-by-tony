@@ -37,7 +37,17 @@ const Home = () => {
     <div className="home">
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="hero-background"></div>
+        {/* Added Spline viewer with inline styles for positioning */}
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.41/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/MSZFXsEO1rUG2Dzs/scene.splinecode" style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 1 // Behind hero-content
+        }}></spline-viewer>
+        <spline-viewer url="https://prod.spline.design/MSZFXsEO1rUG2Dzs/scene.splinecode"></spline-viewer>
         <div className="hero-content fade-in">
           <h1 className="hero-title">Embrace Your Style</h1>
           <p className="hero-subtitle">
